@@ -16,26 +16,26 @@ public class ShoppingCartPrinter {
         name = scanner.nextLine();
 
         System.out.println("Enter the item price:");
-        price = scanner.nextInt();
+        price = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Enter the item quantity:");
-        quantity = scanner.nextInt();
+        quantity = Integer.parseInt(scanner.nextLine());
 
         item1.setName(name);
         item1.setPrice(price);
         item1.setQuantity(quantity);
 
-        scanner.nextLine(); // clean up buffer
+       // scanner.nextLine(); // clean up buffer
 
         System.out.println("\nItem 2");
         System.out.println("Enter the item name:");
         name = scanner.nextLine();
 
         System.out.println("Enter the item price:");
-        price = scanner.nextInt();
+        price = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Enter the item quantity:");
-        quantity = scanner.nextInt();
+        quantity = Integer.parseInt(scanner.nextLine());
 
         item2.setName(name);
         item2.setPrice(price);
