@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class ShoppingCart {
     private String customerName;
     private String currentDate;
-    private ArrayList<ItemToPurchase> cartItems;
+    private LinkedList<ItemToPurchase> cartItems;
 
     public ShoppingCart(String customerName, String currentDate) {
         this.customerName = customerName;
         this.currentDate = currentDate;
-        this.cartItems = new ArrayList<ItemToPurchase>();
+        this.cartItems = new LinkedList<ItemToPurchase>();
     }
 
     public String getCustomerName() {
