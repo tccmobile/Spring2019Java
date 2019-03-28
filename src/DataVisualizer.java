@@ -6,7 +6,7 @@ public class DataVisualizer {
 
         // Enter  your code
         Scanner scanner = new Scanner(System.in);
-        String userInput,tableTitle, tableColumn1, tableColumn2;
+        String userInput,tableTitle, tableColumn1, tableColumn2, firstWord, secondWord;
         ArrayList<String> authorNames = new ArrayList<String>();
         ArrayList<Integer> authorPublications = new ArrayList<Integer>();
 
@@ -30,9 +30,18 @@ public class DataVisualizer {
             if (userInput.indexOf(',')==-1){
                 System.out.println("Error: No comma in string.");
             } else  {
-                String secondWord = userInput.substring(userInput.indexOf(',')+1);
+                firstWord = userInput.substring(0,userInput.indexOf(',')).trim();
+                secondWord = userInput.substring(userInput.indexOf(',')+1).trim();
                 if (secondWord.indexOf(',')!=-1){
                     System.out.println("Error: Too many commas in input.");
+
+                } else {
+                    if (!Character.isDigit(secondWord.charAt(0))){
+                        System.out.println("Comma not followed by an integer.");
+                    } else {
+                        authorNames.add(firstWord);
+                        authorPublications.add(Integer.valueOf(secondWord));
+                    }
                 }
             }
 
