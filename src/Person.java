@@ -29,5 +29,17 @@ public class Person {
         age = 0;
     }
 
+    public void printMe(){
+        System.out.println("My name is: "+ getName());
+        System.out.println("My age is: "+getAge());
 
+    }
+
+    @Override
+    public String toString() {
+        return "My name is: " +
+                 name + '\n' +
+                "My Age is: " + age +
+                '\n';
+    }
 }
