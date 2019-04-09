@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class RectangleChecker {
 
+
     public static void main(String arg[]) {
 
         // Enter  your code
